@@ -1,0 +1,54 @@
+{
+    "name": "youvision/think-timer",
+    "description": "ThinkPHP 8 时间日期助手与可配置友好时间(timeago)组件",
+    "keywords": [
+        "php",
+        "thinkphp",
+        "datetime",
+        "timeago",
+        "timer",
+        "youvision"
+    ],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "youvision"
+        }
+    ],
+    "require": {
+        "php": ">=8.0",
+        "topthink/framework": "^8.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.6 || ^10.5 || ^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Youvision\\ThinkTimer\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Youvision\\ThinkTimer\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "think": {
+            "services": [
+                "Youvision\\ThinkTimer\\TimerService"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "scripts": {
+        "test": "@php tests/run.php"
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
